@@ -1,0 +1,41 @@
+{
+    "name": "lab909/easy-faker",
+    "description": "Fzaninotto's faker for Craft Cms Twig templates",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "easy faker"
+    ],
+    "support": {
+        "docs": "https://github.com/lab909/easy-faker/blob/master/README.md",
+        "issues": "https://github.com/lab909/easy-faker/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lab909",
+            "homepage": "https://github.com/lab909"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "fzaninotto/faker": "v1.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "lab909\\easyfaker\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Easy Faker",
+        "handle": "easy-faker",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/lab909/easy-faker/master/CHANGELOG.md",
+        "class": "lab909\\easyfaker\\EasyFaker"
+    }
+}
