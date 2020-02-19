@@ -11,7 +11,7 @@
 namespace lab909\easyfaker\variables;
 
 use lab909\easyfaker\EasyFaker;
-
+use Faker\Factory;
 use Craft;
 
 /**
@@ -21,19 +21,23 @@ use Craft;
  */
 class EasyFakerVariable
 {
+    private $faker;
+
     // Public Methods
     // =========================================================================
 
     /**
+     * Returns the faker instance
+     * 
      * @param null $optional
      * @return string
      */
-    public function exampleVariable($optional = null)
+    public function getFaker()
     {
-        $result = "And away we go to the Twig template...";
-        if ($optional) {
-            $result = "I'm feeling optional today...";
+        if(empty($this->faker)){
+            $this->faker = Factory::create();
         }
-        return $result;
+
+	    return $this->faker;
     }
 }
